@@ -11,7 +11,6 @@ const fredoka = Fredoka({
 export const metadata: Metadata = {
   title: "Aika CapyBreak",
   description: "A tiny resting place for tired humans. Pet the capybara and take a break.",
-  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -35,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fredoka.variable} antialiased`}>
       <head>
+        <link rel="manifest" href="/manifest.webmanifest" crossOrigin="use-credentials" />
         <link rel="apple-touch-icon" href="/icon.png" />
       </head>
       <body className="font-fredoka overflow-x-hidden selection:bg-cozy-orange/20">
