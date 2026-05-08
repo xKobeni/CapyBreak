@@ -12,7 +12,7 @@ interface AmbientExperienceProps {
 }
 
 export const AmbientExperience: React.FC<AmbientExperienceProps> = ({ isVisible, onClose }) => {
-  const [activeAmbience, setActiveAmbience] = useState<AmbienceType>("m1");
+  const [activeAmbience, setActiveAmbience] = useState<AmbienceType>("m3");
   const [isMuted, setIsMuted] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
