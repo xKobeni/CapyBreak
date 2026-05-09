@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from "framer-motion";
 
-export type AccessoryType = "none" | "flower" | "sunglasses" | "hat";
+export type AccessoryType = "none" | "flower" | "hat" | "bowtie" | "crown" | "sprout";
 
 export type CapyMood = 
   | "normal" 
@@ -239,16 +239,8 @@ export const Capybara: React.FC<CapybaraProps> = ({ mood = "normal", accessory =
             {renderEyes()}
 
             {/* Accessories */}
-            {accessory === "sunglasses" && (
-              <g transform="translate(100, 80)">
-                <rect x="0" y="0" width="12" height="8" rx="2" fill="#1A1108" />
-                <rect x="15" y="0" width="12" height="8" rx="2" fill="#1A1108" />
-                <rect x="12" y="2" width="3" height="2" fill="#1A1108" />
-              </g>
-            )}
-
             {accessory === "flower" && (
-              <g transform="translate(145, 40)">
+              <g transform="translate(85, 55)">
                 <circle cx="0" cy="0" r="4" fill="#FFB7C5" />
                 <circle cx="6" cy="2" r="4" fill="#FFB7C5" />
                 <circle cx="4" cy="8" r="4" fill="#FFB7C5" />
@@ -259,11 +251,32 @@ export const Capybara: React.FC<CapybaraProps> = ({ mood = "normal", accessory =
 
             {accessory === "hat" && (
               <path 
-                d="M140 45L155 15L170 45H140Z" 
+                d="M75 40L90 10L105 40H75Z" 
                 fill="#E74C3C" 
                 stroke="#C0392B" 
                 strokeWidth="1"
               />
+            )}
+
+            {accessory === "bowtie" && (
+              <g transform="translate(60, 145)">
+                <path d="M-10 -5 L10 5 L10 -5 L-10 5 Z" fill="#E74C3C" />
+                <circle r="3" fill="#C0392B" />
+              </g>
+            )}
+
+            {accessory === "crown" && (
+              <g transform="translate(90, 35)">
+                <path d="M-12 10 L-15 -5 L-5 2 L0 -10 L5 2 L15 -5 L12 10 Z" fill="#F1C40F" stroke="#D4AC0D" strokeWidth="1" />
+              </g>
+            )}
+
+            {accessory === "sprout" && (
+              <g transform="translate(130, 40)">
+                <path d="M0 0 Q-5 -10 -15 -10 Q-10 0 0 0" fill="#2ECC71" />
+                <path d="M0 0 Q5 -10 15 -10 Q10 0 0 0" fill="#27AE60" />
+                <path d="M0 0 L0 -5" stroke="#27AE60" strokeWidth="1" />
+              </g>
             )}
 
             {/* Blush */}

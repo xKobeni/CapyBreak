@@ -65,7 +65,7 @@ export default function Home() {
   };
 
   const handleGift = () => {
-    const accessories: AccessoryType[] = ["flower", "sunglasses", "hat"];
+    const accessories: AccessoryType[] = ["flower", "hat", "bowtie", "crown", "sprout"];
     const randomAccessory = accessories[Math.floor(Math.random() * accessories.length)];
     setAccessory(randomAccessory);
     setComfortLevel((prev) => prev + 5);
