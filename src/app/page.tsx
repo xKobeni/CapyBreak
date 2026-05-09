@@ -131,7 +131,12 @@ export default function Home() {
         <div className="relative group transition-transform duration-500 max-h-full">
           <div className="scale-[0.7] md:scale-100 flex items-center justify-center">
             <Capybara 
-              mood={isMeditating ? "sleepy" : isExcited ? "excited" : isHappy ? "happy" : mood === "stressful" ? "sleepy" : "normal"} 
+              mood={
+                isMeditating ? "sleepy" : 
+                isExcited ? "excited" : 
+                isHappy ? "happy" : 
+                mood // Pass the MoodType directly
+              } 
               accessory={accessory}
               onPet={handlePet}
             />
